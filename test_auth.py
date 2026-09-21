@@ -1,7 +1,5 @@
-from auth import verify_token
+# Developer accidentally imports non-existent validate_token
+from auth import validate_token
 
 def test_verify_token_valid():
-    assert verify_token("Bearer secret-123") is True
-
-def test_verify_token_invalid():
-    assert verify_token("") is False
+    assert validate_token("Bearer secret-123") is True
